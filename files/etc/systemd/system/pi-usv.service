@@ -1,0 +1,22 @@
+# --------------------------------------------------------------------------
+# Systemd service definition for pi-usv.service.
+#
+# The service just starts the script /usr/local/bin/pi-usv.py
+#
+# Author: Bernhard Bablok
+# License: GPL3
+#
+# Website: https://github.com/bablokb/pi-usv
+#
+# --------------------------------------------------------------------------
+
+[Unit]
+Description=Start USV supervisor service pi-usv
+After=multi-user.target
+ 
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/pi-usv.py
+
+[Install]
+WantedBy=multi-user.target
