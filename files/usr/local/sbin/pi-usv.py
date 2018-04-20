@@ -93,7 +93,11 @@ class Usv(object):
   def init(self):
     """ initialization after read_config """
 
-    self._foreground = os.getpgrp() == os.tcgetpgrp(sys.stdout.fileno())
+    try:
+      self._foreground = os.getpgrp() == os.tcgetpgrp(sys.stdout.fileno())
+    except:
+      self._foreground = False
+
     if self._debug and not self._foreground:
       syslog.openlog("pi-usv")
 
