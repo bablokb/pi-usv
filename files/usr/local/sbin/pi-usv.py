@@ -129,13 +129,13 @@ class Usv(object):
     """ initiate shutdown (not executed if a shutdown-hook is defined) """
 
     self.debug("INFO","processing shutdown")
-    if not self._debug:
+    if self._debug and self._foreground:
+      self.debug("WARNING","no shutdown in debug+foreground-mode")
+    else:
       try:
         os.system("sudo /sbin/halt &")
       except:
         pass
-    else:
-      self.debug("WARNING","no shutdown in debug-mode")
 
   # --- read and process GPIO-events   ----------------------------------------
 
@@ -210,7 +210,7 @@ class Usv(object):
     if hook_name:
       # execute hook
       self.debug("INFO","executing: %s" % hook_name)
-      os.system("%s &" % hook_name)
+      os.system("%s %s %s &" % (hook_name,state,next_state))
     elif next_state == STATE_SDOWN:
       # N.B: will be skipped if we have a shutdown-hook
       self.debug("INFO","initializing shutdown")
