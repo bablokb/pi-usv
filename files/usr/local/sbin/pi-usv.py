@@ -133,7 +133,7 @@ class Usv(object):
       self.debug("WARNING","no shutdown in debug+foreground-mode")
     else:
       try:
-        os.system("sudo /sbin/halt &")
+        os.system("/sbin/halt &")
       except:
         pass
 
