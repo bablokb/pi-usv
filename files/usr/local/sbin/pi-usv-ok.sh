@@ -28,7 +28,7 @@ fi
 
 # warn users
 if [ -n "$DESKTOP_USER" ]; then
-  su - $DESKTOP_USER -c 'notify-send -u normal "$WALL_TEXT"'
+  su - $DESKTOP_USER -c "notify-send -u normal \"$WALL_TEXT\""
 else
   wall -t 5 "$WALL_TEXT" &
 fi
