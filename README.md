@@ -57,7 +57,7 @@ Install the pi-usv-service with the commands
  
     # optional (desktop-system)
     sudo apt-get -y install libnotify-bin notification-daemon at-spi2-core
-    echo '@/usr/lib/...' >> ...
+    echo '@/usr/lib/notification-daemon/notification-daemon' >> $HOME/.config/lxsession/LXDE-pi/autostart
 
 The last block of commands is only needed on a desktop system and
 installs the notifcation-daemon which displays pop-up messages on the
