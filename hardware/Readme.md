@@ -11,4 +11,5 @@ to build this project yourself:
   - [pic-support-top.gif: top view of the pic support board](./pic-support-top.gif "pic-support-top.gif")
   - [pic-support-layout.gif: bottom view of the pic support board](./pic-support-layout.gif "pic-support-layout.gif")
   - [pic-program.asm: assembler program for the pic](./pic-program.asm "pic-program.asm")
+  - [quarz_4MHz.asm: assembler include](./quarz_4MHz.asm "quarz_4MHz.asm")
   - [pic-program.hex: precompiled version, ready to flash](./pic-program.hex "pic-program.hex")
