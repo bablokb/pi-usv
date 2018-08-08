@@ -4,7 +4,9 @@ Pi-USV
 Overview
 --------
 
-A do-it-yourself UPS for the Raspberry Pi.
+A do-it-yourself UPS for the Raspberry Pi:
+
+![](hardware/mini-usv.jpg "Mini-USV for the Raspberry Pi")
 
 The UPS is connected to the Pi using two GPIO-pins. The UPS signals
 the state of the battery to the Pi and the supervisor-service reacts
@@ -21,6 +23,8 @@ The system supports four states:
 Hardware
 --------
 
+For details about the hardware, browse the
+[hardware-directory](hardware/Readme.md "hardware-directory").
 
 Software
 --------
